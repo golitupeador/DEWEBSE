@@ -1,0 +1,3 @@
+//Generar las entidades en el directorio App/Entidades empezando en el raiz
+php vendor/doctrine/orm/bin/doctrine orm:convert-mapping -f --from-database annotation --namespace="App\\Entidades\\" ./
+php vendor/doctrine/orm/bin/doctrine orm:generate-entities . --generate-annotations=true --regenerate-entities

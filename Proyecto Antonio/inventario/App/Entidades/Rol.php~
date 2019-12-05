@@ -1,0 +1,46 @@
+<?php
+
+namespace App\Entidades;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Rol
+ *
+ * @ORM\Table(name="rol")
+ * @ORM\Entity
+ */
+class Rol
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="idRol", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idrol;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Rol", type="string", length=45, nullable=false)
+     */
+    private $rol;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="App\Entidades\Usuario", mappedBy="rolIdrol")
+     */
+    private $usuario;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->usuario = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+}

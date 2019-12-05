@@ -1,0 +1,80 @@
+<?php
+
+namespace App\Entidades;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Bajaejemplar
+ *
+ * @ORM\Table(name="bajaejemplar", indexes={@ORM\Index(name="fk_bajaejemplar_ubicacion", columns={"ubicacion_idubicacion"}), @ORM\Index(name="fk_bajaejemplar_categoria_idx", columns={"categoria_idcategoria"})})
+ * @ORM\Entity
+ */
+class Bajaejemplar
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="identificacionejemplar", type="string", length=100, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $identificacionejemplar;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="idarticulo", type="integer", nullable=false)
+     */
+    private $idarticulo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=500, nullable=false)
+     */
+    private $descripcion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaalta", type="date", nullable=false)
+     */
+    private $fechaalta;
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="inventariable", type="boolean", nullable=false, options={"default"="1"})
+     */
+    private $inventariable = '1';
+
+    /**
+     * @var \DateTime|null
+     *
+     * @ORM\Column(name="FechaBaja", type="date", nullable=true)
+     */
+    private $fechabaja;
+
+    /**
+     * @var \App\Entidades\Categoria
+     *
+     * @ORM\ManyToOne(targetEntity="App\Entidades\Categoria")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="categoria_idcategoria", referencedColumnName="idcategoria")
+     * })
+     */
+    private $categoriaIdcategoria;
+
+    /**
+     * @var \App\Entidades\Ubicacion
+     *
+     * @ORM\ManyToOne(targetEntity="App\Entidades\Ubicacion")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="ubicacion_idubicacion", referencedColumnName="idubicacion")
+     * })
+     */
+    private $ubicacionIdubicacion;
+
+
+}

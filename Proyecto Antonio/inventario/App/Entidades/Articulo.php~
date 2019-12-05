@@ -1,0 +1,87 @@
+<?php
+
+namespace App\Entidades;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Articulo
+ *
+ * @ORM\Table(name="articulo", indexes={@ORM\Index(name="fk_articulo_ubicacion", columns={"ubicacion_idubicacion"}), @ORM\Index(name="fk_articulo_categoria_idx", columns={"categoria_idcategoria"})})
+ * @ORM\Entity
+ */
+class Articulo
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="idarticulo", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idarticulo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=500, nullable=false)
+     */
+    private $descripcion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaalta", type="date", nullable=false)
+     */
+    private $fechaalta;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="numeroejemplares", type="integer", nullable=false, options={"default"="1"})
+     */
+    private $numeroejemplares = '1';
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="inventariable", type="boolean", nullable=false, options={"default"="1"})
+     */
+    private $inventariable = '1';
+
+    /**
+     * @var \DateTime|null
+     *
+     * @ORM\Column(name="FechaBaja", type="date", nullable=true)
+     */
+    private $fechabaja;
+
+    /**
+     * @var int|null
+     *
+     * @ORM\Column(name="unidades", type="integer", nullable=true)
+     */
+    private $unidades = '0';
+
+    /**
+     * @var \App\Entidades\Categoria
+     *
+     * @ORM\ManyToOne(targetEntity="App\Entidades\Categoria")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="categoria_idcategoria", referencedColumnName="idcategoria")
+     * })
+     */
+    private $categoriaIdcategoria;
+
+    /**
+     * @var \App\Entidades\Ubicacion
+     *
+     * @ORM\ManyToOne(targetEntity="App\Entidades\Ubicacion")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="ubicacion_idubicacion", referencedColumnName="idubicacion")
+     * })
+     */
+    private $ubicacionIdubicacion;
+
+
+}

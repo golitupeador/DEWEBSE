@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<Categorias_Productos>
+  <Categories CategoryName="Beverages">
+    <products ProductName="Chai"/>
+    <products ProductName="Chang"/>
+    <products ProductName="Chartreuse verte"/>
+    <products ProductName="C&#xF4;te de Blaye"/>
+    <products ProductName="Guaran&#xE1; Fant&#xE1;stica"/>
+    <products ProductName="Ipoh Coffee"/>
+    <products ProductName="Lakkalik&#xF6;&#xF6;ri"/>
+    <products ProductName="Laughing Lumberjack Lager"/>
+    <products ProductName="Outback Lager"/>
+    <products ProductName="Rh&#xF6;nbr&#xE4;u Klosterbier"/>
+    <products ProductName="Sasquatch Ale"/>
+    <products ProductName="Steeleye Stout"/>
+  </Categories>
+  <Categories CategoryName="Condiments">
+    <products ProductName="Aniseed Syrup"/>
+    <products ProductName="Chef Anton's Cajun Seasoning"/>
+    <products ProductName="Chef Anton's Gumbo Mix"/>
+    <products ProductName="Genen Shouyu"/>
+    <products ProductName="Grandma's Boysenberry Spread"/>
+    <products ProductName="Gula Malacca"/>
+    <products ProductName="Louisiana Fiery Hot Pepper Sauce"/>
+    <products ProductName="Louisiana Hot Spiced Okra"/>
+    <products ProductName="Northwoods Cranberry Sauce"/>
+    <products ProductName="Original Frankfurter gr&#xFC;ne So&#xDF;e"/>
+    <products ProductName="Sirop d'&#xE9;rable"/>
+    <products ProductName="Vegie-spread"/>
+  </Categories>
+  <Categories CategoryName="Confections">
+    <products ProductName="Chocolade"/>
+    <products ProductName="Gumb&#xE4;r Gummib&#xE4;rchen"/>
+    <products ProductName="Maxilaku"/>
+    <products ProductName="NuNuCa Nu&#xDF;-Nougat-Creme"/>
+    <products ProductName="Pavlova"/>
+    <products ProductName="Schoggi Schokolade"/>
+    <products ProductName="Scottish Longbreads"/>
+    <products ProductName="Sir Rodney's Marmalade"/>
+    <products ProductName="Sir Rodney's Scones"/>
+    <products ProductName="Tarte au sucre"/>
+    <products ProductName="Teatime Chocolate Biscuits"/>
+    <products ProductName="Valkoinen suklaa"/>
+    <products ProductName="Zaanse koeken"/>
+  <products ProductName="Chaqueta"/></Categories>
+  <Categories CategoryName="Dairy Products">
+    <products ProductName="Camembert Pierrot"/>
+    <products ProductName="Flotemysost"/>
+    <products ProductName="Geitost"/>
+    <products ProductName="Gorgonzola Telino"/>
+    <products ProductName="Gudbrandsdalsost"/>
+    <products ProductName="Mascarpone Fabioli"/>
+    <products ProductName="Mozzarella di Giovanni"/>
+    <products ProductName="Queso Cabrales"/>
+    <products ProductName="Queso Manchego La Pastora"/>
+    <products ProductName="Raclette Courdavault"/>
+  </Categories>
+  <Categories CategoryName="Grains/Cereals">
+    <products ProductName="Filo Mix"/>
+    <products ProductName="Gnocchi di nonna Alice"/>
+    <products ProductName="Gustaf's Kn&#xE4;ckebr&#xF6;d"/>
+    <products ProductName="Ravioli Angelo"/>
+    <products ProductName="Singaporean Hokkien Fried Mee"/>
+    <products ProductName="Tunnbr&#xF6;d"/>
+    <products ProductName="Wimmers gute Semmelkn&#xF6;del"/>
+  </Categories>
+  <Categories CategoryName="Meat/Poultry">
+    <products ProductName="Alice Mutton"/>
+    <products ProductName="Mishi Kobe Niku"/>
+    <products ProductName="P&#xE2;t&#xE9; chinois"/>
+    <products ProductName="Perth Pasties"/>
+    <products ProductName="Th&#xFC;ringer Rostbratwurst"/>
+    <products ProductName="Tourti&#xE8;re"/>
+  </Categories>
+  <Categories CategoryName="Produce">
+    <products ProductName="Longlife Tofu"/>
+    <products ProductName="Manjimup Dried Apples"/>
+    <products ProductName="R&#xF6;ssle Sauerkraut"/>
+    <products ProductName="Tofu"/>
+    <products ProductName="Uncle Bob's Organic Dried Pears"/>
+  </Categories>
+  <Categories CategoryName="Seafood">
+    <products ProductName="Boston Crab Meat"/>
+    <products ProductName="Carnarvon Tigers"/>
+    <products ProductName="Escargots de Bourgogne"/>
+    <products ProductName="Gravad lax"/>
+    <products ProductName="Ikura"/>
+    <products ProductName="Inlagd Sill"/>
+    <products ProductName="Jack's New England Clam Chowder"/>
+    <products ProductName="Konbu"/>
+    <products ProductName="Nord-Ost Matjeshering"/>
+    <products ProductName="R&#xF6;d Kaviar"/>
+    <products ProductName="Rogede sild"/>
+    <products ProductName="Spegesild"/>
+  </Categories>
+</Categorias_Productos>

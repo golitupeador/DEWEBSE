@@ -1,0 +1,56 @@
+<?php
+
+namespace App\Entidades;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Prestamo
+ *
+ * @ORM\Table(name="prestamo", indexes={@ORM\Index(name="fk_prestamo_ejemplar1_idx", columns={"ejemplar_idejemplar"})})
+ * @ORM\Entity
+ */
+class Prestamo
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="idprestamo", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idprestamo;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaprestamo", type="datetime", nullable=false)
+     */
+    private $fechaprestamo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="aquien", type="string", length=250, nullable=false)
+     */
+    private $aquien;
+
+    /**
+     * @var \DateTime|null
+     *
+     * @ORM\Column(name="fechadevolucion", type="datetime", nullable=true)
+     */
+    private $fechadevolucion;
+
+    /**
+     * @var \App\Entidades\Ejemplar
+     *
+     * @ORM\ManyToOne(targetEntity="App\Entidades\Ejemplar")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="ejemplar_idejemplar", referencedColumnName="idejemplar")
+     * })
+     */
+    private $ejemplarIdejemplar;
+
+
+}

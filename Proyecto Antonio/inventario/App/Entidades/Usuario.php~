@@ -1,0 +1,75 @@
+<?php
+
+namespace App\Entidades;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Usuario
+ *
+ * @ORM\Table(name="usuario")
+ * @ORM\Entity
+ */
+class Usuario
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="username", type="string", length=45, nullable=false)
+     */
+    private $username;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="password", type="string", length=500, nullable=false)
+     */
+    private $password;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=250, nullable=false)
+     */
+    private $email;
+
+    /**
+     * @var bool|null
+     *
+     * @ORM\Column(name="isActive", type="boolean", nullable=true, options={"default"="1"})
+     */
+    private $isactive = '1';
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="App\Entidades\Rol", inversedBy="usuario")
+     * @ORM\JoinTable(name="usuario_has_rol",
+     *   joinColumns={
+     *     @ORM\JoinColumn(name="Usuario_id", referencedColumnName="id")
+     *   },
+     *   inverseJoinColumns={
+     *     @ORM\JoinColumn(name="Rol_idRol", referencedColumnName="idRol")
+     *   }
+     * )
+     */
+    private $rolIdrol;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->rolIdrol = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+}

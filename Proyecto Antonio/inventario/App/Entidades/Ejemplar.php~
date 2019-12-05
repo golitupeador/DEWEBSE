@@ -1,0 +1,80 @@
+<?php
+
+namespace App\Entidades;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Ejemplar
+ *
+ * @ORM\Table(name="ejemplar", indexes={@ORM\Index(name="fk_ejemplar_ubicacion1_idx", columns={"ubicacion_idubicacion"}), @ORM\Index(name="fk_ejemplar_articulo1_idx", columns={"articulo_idarticulo"})})
+ * @ORM\Entity
+ */
+class Ejemplar
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="idejemplar", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idejemplar;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="identificacion", type="string", length=100, nullable=false)
+     */
+    private $identificacion;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="observacion", type="string", length=500, nullable=true)
+     */
+    private $observacion;
+
+    /**
+     * @var bool|null
+     *
+     * @ORM\Column(name="prestado", type="boolean", nullable=true)
+     */
+    private $prestado;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaalta", type="date", nullable=false)
+     */
+    private $fechaalta;
+
+    /**
+     * @var \DateTime|null
+     *
+     * @ORM\Column(name="fechabaja", type="date", nullable=true)
+     */
+    private $fechabaja;
+
+    /**
+     * @var \App\Entidades\Articulo
+     *
+     * @ORM\ManyToOne(targetEntity="App\Entidades\Articulo")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="articulo_idarticulo", referencedColumnName="idarticulo")
+     * })
+     */
+    private $articuloIdarticulo;
+
+    /**
+     * @var \App\Entidades\Ubicacion
+     *
+     * @ORM\ManyToOne(targetEntity="App\Entidades\Ubicacion")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="ubicacion_idubicacion", referencedColumnName="idubicacion")
+     * })
+     */
+    private $ubicacionIdubicacion;
+
+
+}
